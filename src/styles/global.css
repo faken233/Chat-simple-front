@@ -1,0 +1,47 @@
+:root{
+  --bg:#f3f8ff;
+  --primary:#1976d2; /* 主蓝色 */
+  --muted:#6b7280;
+  --card:#ffffff;
+}
+
+*{box-sizing:border-box}
+body,html,#app{height:100%;margin:0;font-family:Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+body{background:linear-gradient(180deg,var(--bg),#eaf3ff);color:#0f1724}
+
+.app-root{display:flex;flex-direction:column;height:100vh}
+.topbar{background:var(--primary);color:#fff;padding:12px 20px;font-weight:600}
+.container{flex:1;display:flex;align-items:center;justify-content:center;padding:20px}
+
+.card{background:var(--card);border-radius:8px;box-shadow:0 6px 18px rgba(29,78,216,0.08);padding:18px;max-width:420px;width:100%}
+.auth-card h2{margin-top:0}
+.form label{display:block;margin:8px 0}
+.form input{width:100%;padding:8px;border:1px solid #e6edf8;border-radius:6px}
+.actions{display:flex;gap:8px;margin-top:12px}
+.btn{padding:8px 12px;border-radius:6px;border:none;background:#eef6ff;color:var(--primary);cursor:pointer}
+.btn.primary{background:var(--primary);color:#fff}
+
+/* 聊天布局 */
+.chat-layout{display:flex;height:80vh;width:100%;max-width:1100px;background:transparent}
+.sidebar{width:260px;background:rgba(255,255,255,0.95);border-radius:8px;padding:12px;margin-right:12px}
+.sidebar-header{font-weight:600;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.btn.small{padding:4px 8px;font-size:12px}
+.room-actions{display:flex;gap:8px;margin-bottom:8px}
+.room-actions input{flex:1;padding:6px;border-radius:6px;border:1px solid #e6edf8}
+
+.tabs{display:flex;margin-bottom:10px;border-bottom:1px solid #e6edf8}
+.tab{flex:1;padding:8px;background:none;border:none;cursor:pointer;font-weight:600;color:var(--muted);border-bottom:2px solid transparent}
+.tab.active{color:var(--primary);border-bottom-color:var(--primary)}
+
+.list{list-style:none;padding:0;margin:0}
+.item{padding:10px;border-radius:6px;cursor:pointer;margin-bottom:4px}
+.item:hover{background:#f1f9ff}
+.item.active{background:#e6f0ff;color:var(--primary);font-weight:600}
+
+.chat-area{flex:1;display:flex;flex-direction:column;background:rgba(255,255,255,0.95);border-radius:8px;padding:12px}
+.chat-header{font-weight:600;margin-bottom:6px}
+.messages{flex:1;overflow:auto;padding:8px;border-radius:6px;border:1px solid #f0f6ff;background:#fff}
+.message{margin-bottom:8px}
+.message .meta{font-size:12px;color:var(--muted)}
+.composer{display:flex;margin-top:8px}
+.composer input{flex:1;padding:8px;border-radius:6px;border:1px solid #e6edf8}
